@@ -1,0 +1,13 @@
+# NEUROSKETCH demo commands
+
+# 1) Generate synthetic EEG CSV (demo)
+python synth_eeg.py
+
+# 2) Convert EEG -> prompt (prints prompt + adjectives)
+python eeg_to_prompt.py --eeg examples/sample_eeg.csv
+
+# 3) Generate an image from a prompt (requires diffusers and model)
+python generate_image.py --prompt "a dreamy abstract painting" --out_dir outputs --filename nso.png
+
+# 4) Run the Streamlit demo
+streamlit run app.py

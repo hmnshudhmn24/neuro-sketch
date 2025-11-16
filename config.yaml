@@ -1,0 +1,27 @@
+eeg:
+  sample_rate: 256
+  channels: ['Fz','Cz','Pz']
+  duration_secs: 4
+mapping:
+  low_freq: [1, 8]
+  mid_freq: [8, 13]
+  high_freq: [13, 30]
+  gamma_freq: [30, 70]
+prompt:
+  base_templates:
+    - "an abstract painting evoking {mood}, {color_palette}, {texture}, surreal style, high-detail"
+  adjective_map:
+    mood:
+      high_beta: "energetic, frenetic"
+      high_alpha: "calm, meditative"
+      high_delta: "dreamlike, deep"
+      high_gamma: "intense, vivid"
+    color:
+      energetic: "vibrant reds and oranges"
+      calm: "soft blues and greens"
+      dreamlike: "muted pastels"
+      intense: "neon highlights with dark contrast"
+  diffusion:
+    model_name: "runwayml/stable-diffusion-v1-5"
+    guidance_scale: 7.5
+    num_inference_steps: 30

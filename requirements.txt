@@ -1,0 +1,14 @@
+python>=3.8
+numpy
+pandas
+scipy
+matplotlib
+Pillow
+torch
+diffusers
+transformers
+accelerate
+safetensors
+streamlit
+pyyaml
+moviepy
