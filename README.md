@@ -1,26 +1,10 @@
----
-language:
-  - en
-license: mit
-tags:
-  - text-to-image
-  - vision
-  - creativity
-  - eeg
-  - bio-art
-  - multimodal
-pipeline_tag: text-to-image
-library_name: python
-model_name: neurosketch
----
-
-# NEUROSKETCH — EEG & Concept → Abstract Image
+# NEUROSKETCH
 
 **NEUROSKETCH** converts simulated EEG-style brainwave signals or conceptual text into abstract images. It maps simple EEG band-power features to visual adjectives (mood, color palette, texture), constructs a creative text prompt, and uses a text-to-image model (Stable Diffusion via `diffusers`) to generate artwork.
 
 > ⚠️ **Safety / scope**: This repository is a **creative research prototype**. It is **not** a medical tool and should **not** be used with real patient EEG data in public contexts or for clinical decision-making. Use synthetic or anonymized data and follow all privacy/regulatory rules.
 
----
+
 
 ## Features
 
@@ -30,7 +14,7 @@ model_name: neurosketch
 - Streamlit app to try EEG→image or prompt→image interactively (`app.py`)
 - Notebook demo and CLI examples included
 
----
+
 
 ## Quickstart
 
@@ -61,7 +45,7 @@ python generate_image.py --prompt "a dreamy abstract painting, soft pastels" --o
 streamlit run app.py
 ```
 
----
+
 
 ## How it works (high-level)
 
@@ -71,7 +55,7 @@ streamlit run app.py
 4. **Prompt assembly**: Template fills adjectives into an artistic prompt.
 5. **Generation**: `generate_image.py` uses a diffusion model (via `diffusers`) to produce the image.
 
----
+
 
 ## Limitations & Ethics
 
@@ -79,8 +63,3 @@ streamlit run app.py
 - Do **not** use real patient EEG in public repositories without consent and compliance.
 - Image generation inherits biases from pretrained models — inspect outputs critically.
 
----
-
-## License
-
-MIT
